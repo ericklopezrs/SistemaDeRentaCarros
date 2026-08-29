@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Reg_Cliente"
+        android:title="Reg. Cliente"
+        />
+    <item
+        android:id="@+id/Reg_Vehiculo"
+        android:title="Reg. Vehiculo"
+        />
+    <item
+        android:id="@+id/Con_Vehiculo"
+        android:title="Con. Vehiculo"
+        />
+    <item
+        android:id="@+id/Renta"
+        android:title="Renta"
+        />
+    <item
+        android:id="@+id/Devolucion"
+        android:title="Devolucion"
+        />
+    <item
+        android:id="@+id/Con_Renta"
+        android:title="Con. Renta"
+        />
+    <item
+        android:id="@+id/Principal"
+        android:title="Principal"
+        />
+
+
+</menu>
