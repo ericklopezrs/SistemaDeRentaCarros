@@ -15,7 +15,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class renta : AppCompatActivity() {
+class rentaobject : AppCompatActivity() {
 
     lateinit var spIdentificacion: Spinner
     lateinit var spVehiculo: Spinner
@@ -49,15 +49,55 @@ class renta : AppCompatActivity() {
         spIdentificacion.adapter = adapterClientes
 
         // Llenar Spinner de Vehículos (Solo los disponibles)
-        val listaVehiculos = vehiculo.listaVehiculos.filter { it.disponibilidad == "Disponible" }.map { it.placa + " - " + it.modelo }
-        val adapterVehiculos = ArrayAdapter(this, android.R.layout.simple_spinner_item, listaVehiculos)
+        val listaVehiculosDisponibles = vehiculo.listaVehiculos.filter { it.disponibilidad == "Disponible" }
+        val listaNombresVehiculos = listaVehiculosDisponibles.map { it.placa + " - " + it.modelo }
+        val adapterVehiculos = ArrayAdapter(this, android.R.layout.simple_spinner_item, listaNombresVehiculos)
         adapterVehiculos.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spVehiculo.adapter = adapterVehiculos
+
+        btnConfirmar.setOnClickListener { Guardar() }
+        btnCancelar.setOnClickListener { finish() }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+    }
+
+    private fun Guardar() {
+        if (spIdentificacion.selectedItem == null || spVehiculo.selectedItem == null || 
+            etNumDias.text.isEmpty() || etCosto.text.isEmpty() || etCostoTotal.text.isEmpty()) {
+            Toast.makeText(this, "Llene todos los campos", Toast.LENGTH_SHORT).show()
+        } else {
+            val nuevaRenta = datosrenta(
+                identificacion = spIdentificacion.selectedItem.toString(),
+                vehiculo = spVehiculo.selectedItem.toString(),
+                diasRenta = etNumDias.text.toString(),
+                costoDia = etCosto.text.toString().toDoubleOrNull() ?: 0.0,
+                total = etCostoTotal.text.toString().toDoubleOrNull() ?: 0.0
+            )
+            
+            renta_lista.listaRentas.add(nuevaRenta)
+            
+            // Cambiar disponibilidad del vehículo a "No Disponible"
+            val vehiculoSeleccionadoStr = spVehiculo.selectedItem.toString()
+            val placa = vehiculoSeleccionadoStr.split(" - ")[0]
+            vehiculo.listaVehiculos.find { it.placa == placa }?.disponibilidad = "No Disponible"
+
+            Toast.makeText(this, "Renta guardada correctamente", Toast.LENGTH_SHORT).show()
+            
+            // Limpiar campos y cerrar o refrescar
+            etNumDias.text.clear()
+            etCosto.text.clear()
+            etCostoTotal.text.clear()
+            
+            // Opcional: recargar el spinner de vehículos para quitar el que ya se rentó
+            val listaVehiculosDisponibles = vehiculo.listaVehiculos.filter { it.disponibilidad == "Disponible" }
+            val listaNombresVehiculos = listaVehiculosDisponibles.map { it.placa + " - " + it.modelo }
+            val adapterVehiculos = ArrayAdapter(this, android.R.layout.simple_spinner_item, listaNombresVehiculos)
+            adapterVehiculos.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spVehiculo.adapter = adapterVehiculos
         }
     }
 

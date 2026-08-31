@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnRenV.setOnClickListener {
-            startActivity(Intent(this, renta::class.java))
+            startActivity(Intent(this, rentaobject::class.java))
         }
 
         btnDevV.setOnClickListener {
@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (item.itemId == R.id.Renta) {
-            startActivity(Intent(this, renta::class.java))
+            startActivity(Intent(this, rentaobject::class.java))
         }
 
         if (item.itemId == R.id.Devolucion) {

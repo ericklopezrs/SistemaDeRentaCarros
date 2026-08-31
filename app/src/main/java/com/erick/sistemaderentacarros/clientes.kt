@@ -82,7 +82,7 @@ class clientes : AppCompatActivity() {
         }
 
         if (item.itemId == R.id.Renta) {
-            val cambio = Intent(this, renta::class.java)
+            val cambio = Intent(this, rentaobject::class.java)
             startActivity(cambio)
         }
 
