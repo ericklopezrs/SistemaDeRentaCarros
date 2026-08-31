@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".tarjeta">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="20dp"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        app:cardElevation="15dp"
+        app:cardCornerRadius="25dp"
+        >
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:src="@drawable/carro"
+            android:alpha=".5"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/ATCliente"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cliente"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/tarjeta_marca"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vehiculo"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/tarjeta_empresa"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Numero de dias"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/tarjeta_precio"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Costo total"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/tarjeta_pais"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estado de la renta"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+
+                />
+
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/buttonRegresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:backgroundTint="#7DC870"
+        />
+
+</LinearLayout>

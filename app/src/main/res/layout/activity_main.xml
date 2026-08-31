@@ -19,6 +19,7 @@
         android:id="@+id/titulo_menu"
         android:text="MENU"
         android:textColor="#A42424"
+
         android:textSize="45sp"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
@@ -29,17 +30,159 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="145dp"
         android:layout_height="wrap_content"
-        android:id="@+id/Reg_Cliente"
+        android:id="@+id/AMRegV"
         android:text="Reg. Vehiculos"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="#252850"
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="45dp"
         />
 
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/regvehiculo" />
 </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <Button
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/AMRegC"
+            android:text="Reg. Clientes"
+            android:backgroundTint="#341539"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp"
+            />
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/regclientes" />
+        </LinearLayout>
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <Button
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/AMConV"
+            android:text="Consultar\nVehiculos"
+            android:backgroundTint="#780E00"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp"
+            />
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/convehiculo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <Button
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/AMRenV"
+            android:text="Renta de Vehiculos"
+            android:backgroundTint="#AD4264"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp"
+            />
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/regclientes" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <Button
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/AMDevV"
+            android:text="Devolucion de vehiculos"
+            android:backgroundTint="#C76E00"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp"
+            />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/devolucion"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="70dp"/>
+
+
+
+        </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+        <Button
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/AMConR"
+            android:text="Consulta de rentas"
+            android:backgroundTint="#3C3C3B"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp"
+            />
+
+          <ImageView
+              android:layout_marginTop="10dp"
+              android:layout_marginLeft="70dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/consultarrenta" />
+      </LinearLayout>
+    </LinearLayout>
 
 
 

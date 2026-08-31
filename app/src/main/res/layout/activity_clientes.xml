@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".clientes">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Registro de Clientes"
+        android:textSize="35dp"
+        android:textColor="#A23939"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/ACIdentificacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Identificacion"
+        />
+
+    <EditText
+        android:id="@+id/ARMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        />
+
+    <EditText
+        android:id="@+id/ARAnio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Telefono"
+        />
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:id="@+id/ARGuardar"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:backgroundTint="#026222"
+        />
+
+</LinearLayout>

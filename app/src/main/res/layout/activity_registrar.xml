@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".registrar">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Registro de Vehiculos"
+        android:textSize="35dp"
+        android:textColor="#A23939"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/ARPlaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Placa"
+        />
+
+    <EditText
+        android:id="@+id/ARMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Marca"
+        />
+    <EditText
+        android:id="@+id/ARModelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Modelo"
+        />
+
+    <EditText
+        android:id="@+id/ARAnio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Anio"
+        />
+
+    <EditText
+        android:id="@+id/ARCosto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Costo de renta por dia"
+        />
+
+
+
+    <Spinner
+        android:layout_marginTop="10dp"
+        android:id="@+id/ARDisponibilidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:layout_marginTop="50dp"
+        android:id="@+id/ARGuardar"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:backgroundTint="#026222"
+        />
+
+
+</LinearLayout>

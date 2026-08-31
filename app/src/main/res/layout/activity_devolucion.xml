@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".devolucion">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Devolucion del Vehiculo"
+        android:textSize="35dp"
+        android:textColor="#A23939"
+        android:layout_marginBottom="5dp"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:layout_marginTop="20dp"
+        android:id="@+id/ADIdentificacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Spinner
+        android:layout_marginTop="20dp"
+        android:id="@+id/ADCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Spinner
+        android:layout_marginTop="20dp"
+        android:id="@+id/ADVehiculo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:id="@+id/ADRegistrarVehiculo"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar Vehiculo"
+        android:backgroundTint="#026222"
+        />
+
+
+</LinearLayout>

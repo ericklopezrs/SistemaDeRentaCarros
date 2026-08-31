@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".renta">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Renta del Vehiculo"
+        android:textSize="35dp"
+        android:textColor="#A23939"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:layout_marginTop="10dp"
+        android:id="@+id/AREIdentificacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Spinner
+        android:layout_marginTop="10dp"
+        android:id="@+id/AREVehiculo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:id="@+id/ARENumDias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Numero de dias de renta"
+        />
+
+    <EditText
+        android:id="@+id/ARECosto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Costo por dia"
+        />
+
+    <EditText
+        android:id="@+id/ARECostoTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Costo total"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/AREConfirmar"
+        android:textSize="20dp"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:text="Confirmar Renta"
+        android:backgroundTint="#026222"
+        />
+
+        <Button
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/ARECancelar"
+            android:textSize="20dp"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:text="Cancelar Renta"
+            android:backgroundTint="#B64743"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
